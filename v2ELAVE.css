@@ -748,7 +748,7 @@ input:disabled {
     position: fixed;
     z-index: 3000;
     overflow: visible;
-    right: 50px;
+    right: 120px;
     top: 15px;
 }
 
@@ -761,10 +761,15 @@ input:disabled {
     cursor: pointer;
     width: 80px;
     transition: .3s all;
+
+
+    position: relative;
 }
 
 #languages .dropdown {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 100%;
     display: inline-block;
 }
 
@@ -772,6 +777,8 @@ input:disabled {
     /* display: none; */
     opacity: 0;
     pointer-events: none;
+    left: 0;
+    top: 100%;
 
     position: absolute;
     /* background-color: #17557271; */
@@ -823,12 +830,22 @@ input:disabled {
     text-align: left;
 }
 
-#languages div[language3="aze"] span.eng,
-#languages div[language3="aze"] span.rus {
+#languages #languagesBtn span:not([active]) {
     display: none;
 }
 
-#languages div[language3="eng"] span.aze,
+#languages #languagesBtn span[active].aze ~.dropdown-content .aze {
+    display: none;
+}
+#languages #languagesBtn span[active].eng ~.dropdown-content .eng {
+    display: none;
+}
+#languages #languagesBtn span[active].rus ~.dropdown-content .rus {
+    display: none;
+}
+
+
+/* #languages div[language3="eng"] span.aze,
 #languages div[language3="eng"] span.rus {
     display: none;
 }
@@ -849,6 +866,10 @@ input:disabled {
 #languages div[language3="rus"] a.rus {
     display: none;
 }
+
+
+
+ */
 
 
 #languages.sticky-nav {
@@ -892,6 +913,8 @@ input:disabled {
     #languages {
         background-color: transparent;
         box-shadow: none;
+        right: 120px;
+
     }
 
     #languages a,
@@ -927,6 +950,8 @@ input:disabled {
     #languages {
         top: 30px;
         right: 40px;
+        right: 120px;
+
     }
 }
 
@@ -934,8 +959,18 @@ input:disabled {
     #languages {
         top: 22px;
         right: 40px;
+        right: 120px;
+
     }
+
 }
+
+
+
+
+
+
+
 
 
 
@@ -988,7 +1023,7 @@ input:disabled {
     height: 30vh;
     object-fit: cover;
 }
- 
+
 @media screen and (min-width:1440px) {
 
     #section_3 .row>*>h2,
@@ -1001,7 +1036,7 @@ input:disabled {
         margin-top: 20px;
     }
 
-   
+
 }
 
 @media screen and (max-width:1440px) {
@@ -1009,28 +1044,33 @@ input:disabled {
         height: 30vh;
         object-fit: cover;
     }
+
     #section_3 {
         margin-top: 10px;
         padding-top: 30px;
     }
+
     #section_3 .row>*>h2,
     #section_4 .row *>h2 {
         font-size: 28px;
         margin-bottom: 30px;
     }
+
     #section_3 .container {
         max-width: 720px !important;
     }
-    #section_3 .row .card { 
+
+    #section_3 .row .card {
         padding-bottom: 20px;
-    
+
     }
 }
 
-@media (max-width: 1400px)
- { #section_3{
-    padding-top: 120px;
- }
+@media (max-width: 1400px) {
+    #section_3 {
+        padding-top: 120px;
+    }
+
     #section_3 .container {
         max-width: 720px !important;
     }

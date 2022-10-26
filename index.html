@@ -67,10 +67,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/blogs/">Bloq</a>
                     </li>
-      
-                   <li class="nav-item">
-                    <a class="nav-link" href="./faqpage.html">FAQ</a>
-                </li> 
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./faqpage.html">FAQ</a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/v2Documents.html">Sənəd formaları</a>
@@ -85,13 +85,6 @@
                     </li>
 
                 </ul>
-
-                <!-- <div class="ms-auto d-none d-lg-block"> -->
-                <!-- <a href="/calculator/" class="custom-btn btn btn-lg">
-                    Calculator
-                </a> -->
-                <!-- </div> -->
-
 
             </div>
         </div>
@@ -116,24 +109,22 @@
 
 
     <div id="languages">
+        <div id="languages3"  class="dropdown">
+            <button id="languagesBtn" class="dropbtn">
 
-        <div id="languages3" language3="aze" class="dropdown">
-            <button id="languagesBtn" class="dropbtn"> 
-                <span class="aze">AZ</span>
-                <span class="eng">EN</span>
-                <span class="rus">RU</span>
+                <span  class="aze">AZ <i class="fa-solid fa-chevron-down"></i></span>
+                <span  class="eng">EN <i class="fa-solid fa-chevron-down"></i></span>
+                <span active class="rus">RU <i class="fa-solid fa-chevron-down"></i></span>
 
-                <i class="fa-solid fa-chevron-down"></i>
+                <div class="dropdown-content">
+                    <a onclick="setLanguage('aze')" class="aze" href="#">AZ</a>
+                    <a onclick="setLanguage('eng')" class="eng" href="#">EN</a>
+                    <a onclick="setLanguage('rus')" class="rus" href="#">RU</a>
+                </div>
+
             </button>
-            <div class="dropdown-content">
-                <a onclick="setLanguage('aze')" class="aze" href="#">AZ</a>
-                <a onclick="setLanguage('eng')"  class="eng" href="#">EN</a>
-                <a onclick="setLanguage('rus')"  class="rus" href="#">RU</a>
-            </div>
         </div>
-
     </div>
-
 
 
     <main>

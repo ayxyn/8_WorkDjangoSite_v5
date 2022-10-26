@@ -36,7 +36,18 @@
         "static/images/slide/pexels-cottonbro-7437100.jpg"
     ], { duration: 2000, fade: 750 });
 
+    $('#selectLanguage').hover(function() {
+
+        $(this).attr('size', $('option').length);
+      }, function() {
+      
+        $(this).attr('size', 1);
+      });
+
+
 })(window.jQuery);
+
+
 
 
 
@@ -87,11 +98,11 @@ function toggleIframe(name) {
 
 }
 
-function setLanguage(dil) {
-     languages3.setAttribute("language3", dil); 
-    console.log(dil);
+// function setLanguage(dil) {
+//      languages3.setAttribute("language3", dil); 
+//     console.log(dil);
 
-}
+// }
 
 function toggle3dots() {
     const icons = document.getElementById('dotsHolder');
