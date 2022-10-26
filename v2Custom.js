@@ -1,29 +1,5 @@
  
 
-$( document ).ready(function() {
-    // var activeLanguage = '';
-    // var otherLanguages = '';
-
-    // $('#languageHolder .absolute a').each(function (i) {
-    //     var attr = $(this).attr('activeLanguage');
-
-    //     if (typeof attr !== 'undefined' && attr !== false) {
-    //         // activeLanguage +='<a activeLanguage>'+$(this).html()+'</a>' ;
-    //         activeLanguage += $(this)[0].outerHTML;
-    //         console.log( activeLanguage);
-    //     } else {
-    //         otherLanguages+=$(this)[0].outerHTML;
-    //         console.log( otherLanguages);
-
-    //     }
-    // });
-
-    // $('#languageHolder .absolute').html(activeLanguage + otherLanguages)
-    // console.log(activeLanguage);
-});
-
-
-
 
 (function ($) {
     "use strict";
@@ -35,7 +11,7 @@ $( document ).ready(function() {
 
 
 
-    // $(window).scroll(function() {    
+    
     //     var scroll = $(window).scrollTop();
 
     //     if (scroll >= 50) {
@@ -78,16 +54,17 @@ function scrollHandler() {
         $("#languages").removeClass("sticky-nav");
 
     }
+
     if (window.pageYOffset >= 720) {
         $("#myBtnn").addClass("active");
+        $(".iconw").addClass("passive");
+
     } else {
         $("#myBtnn").removeClass("active");
-    }
-    if (window.pageYOffset >= 720) {
-        $(".iconw").addClass("passive");
-    } else {
         $(".iconw").removeClass("passive");
+
     }
+    
 }
 
 
@@ -163,30 +140,21 @@ $('#arrowButton').click(function () {
 
 
 
-$('#languageHolder').click(function () {
+// $('#languageHolder').click(function () {
 
 
-    if (window.innerWidth < 992) {
-        document.getElementById("languageHolder").classList.toggle("active");
+//     if (window.innerWidth < 992) {
+//         document.getElementById("languageHolder").classList.toggle("active");
 
-    }
-    else {
-        return
-    }
-})
-
-//   $("p").hide();
-
-$('body').click(function (evt) {
-    // if (evt.target.id !== "languageHolder") {
-    //     return
-    // } else {
-
-    // }
+//     }
+//     else {
+//         return
+//     }
+// })
 
  
 
-});
+
 
 
 $('#inputGrossIncome').on('input', function () {
@@ -219,12 +187,10 @@ $('#sector_type_2').click(function (evt) {
 
 });
 
-
 $('#serviceDetails .accordion .accordion-header').on('click', function () {
 
     $(this).siblings('.accordion-collapse').slideToggle();
     $(this).toggleClass('opened');
-
 
 });
 
